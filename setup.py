@@ -24,7 +24,7 @@ setup(
     name='vcs',
     version=vcs.get_version(),
     url='https://github.com/codeinn/vcs',
-    author='Marcin Kuzminski, Lukasz Balcerzak',
+    author='Marcin Kuzminski, Lukasz Balcerzak, Dmitry Zhiltsov',
     author_email='marcin@python-works.com',
     description=vcs.__doc__,
     long_description=long_description,

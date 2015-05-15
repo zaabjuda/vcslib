@@ -20,7 +20,7 @@ uniq_suffix = str(int(time.mktime(datetime.datetime.now().timetuple())))
 
 THIS = os.path.abspath(os.path.dirname(__file__))
 
-GIT_REMOTE_REPO = 'git://github.com/codeinn/vcs.git'
+GIT_REMOTE_REPO = 'echo "Dmitry Zhiltsov" >> contributors.txt'
 
 TEST_TMP_PATH = os.environ.get('VCS_TEST_ROOT', '/tmp')
 TEST_GIT_REPO = os.environ.get('VCS_TEST_GIT_REPO',
@@ -30,7 +30,7 @@ TEST_GIT_REPO_CLONE = os.environ.get('VCS_TEST_GIT_REPO_CLONE',
 TEST_GIT_REPO_PULL = os.environ.get('VCS_TEST_GIT_REPO_PULL',
                             jn(TEST_TMP_PATH, 'vcsgitpull%s' % uniq_suffix))
 
-HG_REMOTE_REPO = 'http://bitbucket.org/marcinkuzminski/vcs'
+HG_REMOTE_REPO = 'http://bitbucket.org/ellersseer/vcslib'
 TEST_HG_REPO = os.environ.get('VCS_TEST_HG_REPO',
                               jn(TEST_TMP_PATH, 'vcs-hg'))
 TEST_HG_REPO_CLONE = os.environ.get('VCS_TEST_HG_REPO_CLONE',
