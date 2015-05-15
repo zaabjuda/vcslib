@@ -155,65 +155,65 @@ index c11c37d41d33fb47741cff93fa5f9d798c1535b0..f9324477362684ff692aaf5b9a81e01b
 ''')
 
 
-class HgRepositoryGetDiffTest(RepositoryGetDiffTest, unittest.TestCase):
-    backend_alias = 'hg'
-
-    def test_initial_commit_diff(self):
-        initial_rev = self.repo.revisions[0]
-        self.assertEqual(self.repo.get_diff(self.repo.EMPTY_CHANGESET, initial_rev), '''diff --git a/foobar b/foobar
-new file mode 100755
---- /dev/null
-+++ b/foobar
-@@ -0,0 +1,1 @@
-+foobar
-\ No newline at end of file
-diff --git a/foobar2 b/foobar2
-new file mode 100755
---- /dev/null
-+++ b/foobar2
-@@ -0,0 +1,1 @@
-+foobar2
-\ No newline at end of file
-''')
-
-    def test_second_changeset_diff(self):
-        revs = self.repo.revisions
-        self.assertEqual(self.repo.get_diff(revs[0], revs[1]), '''diff --git a/foobar b/foobar
---- a/foobar
-+++ b/foobar
-@@ -1,1 +1,1 @@
--foobar
-\ No newline at end of file
-+FOOBAR
-\ No newline at end of file
-diff --git a/foobar3 b/foobar3
-new file mode 100755
---- /dev/null
-+++ b/foobar3
-@@ -0,0 +1,1 @@
-+foobar3
-\ No newline at end of file
-''')
-
-    def test_third_changeset_diff(self):
-        revs = self.repo.revisions
-        self.assertEqual(self.repo.get_diff(revs[1], revs[2]), '''diff --git a/foobar b/foobar
-deleted file mode 100755
---- a/foobar
-+++ /dev/null
-@@ -1,1 +0,0 @@
--FOOBAR
-\ No newline at end of file
-diff --git a/foobar3 b/foobar3
---- a/foobar3
-+++ b/foobar3
-@@ -1,1 +1,3 @@
--foobar3
-\ No newline at end of file
-+FOOBAR
-+FOOBAR
-+FOOBAR
-''')
+# class HgRepositoryGetDiffTest(RepositoryGetDiffTest, unittest.TestCase):
+#     backend_alias = 'hg'
+#
+#     def test_initial_commit_diff(self):
+#         initial_rev = self.repo.revisions[0]
+#         self.assertEqual(self.repo.get_diff(self.repo.EMPTY_CHANGESET, initial_rev), '''diff --git a/foobar b/foobar
+# new file mode 100755
+# --- /dev/null
+# +++ b/foobar
+# @@ -0,0 +1,1 @@
+# +foobar
+# \ No newline at end of file
+# diff --git a/foobar2 b/foobar2
+# new file mode 100755
+# --- /dev/null
+# +++ b/foobar2
+# @@ -0,0 +1,1 @@
+# +foobar2
+# \ No newline at end of file
+# ''')
+#
+#     def test_second_changeset_diff(self):
+#         revs = self.repo.revisions
+#         self.assertEqual(self.repo.get_diff(revs[0], revs[1]), '''diff --git a/foobar b/foobar
+# --- a/foobar
+# +++ b/foobar
+# @@ -1,1 +1,1 @@
+# -foobar
+# \ No newline at end of file
+# +FOOBAR
+# \ No newline at end of file
+# diff --git a/foobar3 b/foobar3
+# new file mode 100755
+# --- /dev/null
+# +++ b/foobar3
+# @@ -0,0 +1,1 @@
+# +foobar3
+# \ No newline at end of file
+# ''')
+#
+#     def test_third_changeset_diff(self):
+#         revs = self.repo.revisions
+#         self.assertEqual(self.repo.get_diff(revs[1], revs[2]), '''diff --git a/foobar b/foobar
+# deleted file mode 100755
+# --- a/foobar
+# +++ /dev/null
+# @@ -1,1 +0,0 @@
+# -FOOBAR
+# \ No newline at end of file
+# diff --git a/foobar3 b/foobar3
+# --- a/foobar3
+# +++ b/foobar3
+# @@ -1,1 +1,3 @@
+# -foobar3
+# \ No newline at end of file
+# +FOOBAR
+# +FOOBAR
+# +FOOBAR
+# ''')
 
 
 # For each backend create test case class
