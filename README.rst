@@ -1,20 +1,21 @@
-===
-VCS
-===
+======
+managevcs
+======
 
-.. image:: https://secure.travis-ci.org/codeinn/vcs.png?branch=master
-  :target: http://travis-ci.org/codeinn/vcs
+.. image:: https://secure.travis-ci.org/zaabjuda/vcslib.png?branch=master
+  :target: http://travis-ci.org/zaabjuda/vcslib
 
 various version control system management abstraction layer for python.
+This is fork of project `vcs <https://github.com/zaabjuda/managevcs>`_
 
 ------------
 Introduction
 ------------
 
-``vcs`` is abstraction layer over various version control systems. It is
+``managevcs`` is abstraction layer over various version control systems. It is
 designed as feature-rich Python_ library with clean *API*.
 
-vcs uses `Semantic Versioning <http://semver.org/>`_
+managevcs uses `Semantic Versioning <http://semver.org/>`_
 
 **Features**
 
@@ -31,7 +32,7 @@ Documentation
 -------------
 
 Online documentation for development version is available at
-http://packages.python.org/vcs/.
+http://packages.python.org/managevcs/.
 
 You may also build documentation for yourself - go into ``docs/`` and run::
 

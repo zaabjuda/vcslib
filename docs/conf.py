@@ -20,7 +20,7 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__))))
 sys.path.append(os.path.abspath('..'))
-vcs = __import__('vcs')
+vcs = __import__('managevcs')
 
 # -- General configuration -----------------------------------------------------
 
@@ -49,7 +49,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'vcs'
+project = u'managevcs'
 copyright = u'2010, Marcin Kuzminski & Lukasz Balcerzak'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -184,7 +184,7 @@ htmlhelp_basename = 'vcsdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'vcs.tex', u'vcs Documentation',
+  ('index', 'managevcs.tex', u'managevcs Documentation',
    u'Marcin Kuzminski & Lukasz Balcerzak', 'manual'),
 ]
 
@@ -206,7 +206,7 @@ latex_documents = [
 #latex_use_modindex = True
 
 pdf_documents = [
-    ('index', u'vcs', u'vcs Documentation',
+    ('index', u'managevcs', u'managevcs Documentation',
         u'Marcin Kuzminski & Lukasz Balcerzak') ,
 ]
 pdf_stylesheets = ['sphinx', 'kerning', 'a4']

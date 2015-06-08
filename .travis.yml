@@ -6,7 +6,7 @@ install:
   - pip install -q dulwich mercurial==3.4 mock pygments
   - pip install . --use-mirrors
 
-script: python vcs/tests/__main__.py
+script: python managevcs/tests/__main__.py
 after_script: python setup.py flakes
 
 notifications:

@@ -68,7 +68,7 @@ class RunFlakesCommand(Command):
             sys.stderr.write("No pyflakes installed!\n")
             sys.exit(-1)
         thisdir = os.path.dirname(__file__)
-        vcsdir = os.path.join(thisdir, 'vcs')
+        vcsdir = os.path.join(thisdir, 'managevcs')
         warns = 0
         # Define top-level directories
         for topdir, dirnames, filenames in os.walk(vcsdir):

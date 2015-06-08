@@ -3,7 +3,7 @@ import sys
 from setuptools import setup, find_packages
 from extras import RunFlakesCommand
 
-vcs = __import__('vcs')
+managevcs = __import__('managevcs')
 readme_file = os.path.abspath(os.path.join(os.path.dirname(__file__),
     'README.rst'))
 
@@ -21,19 +21,19 @@ tests_require = install_requires + ['dulwich', 'mercurial']
 
 
 setup(
-    name='vcs',
-    version=vcs.get_version(),
-    url='https://github.com/codeinn/vcs',
+    name='managevcs',
+    version=managevcs.get_version(),
+    url='https://github.com/codeinn/managevcs',
     author='Marcin Kuzminski, Lukasz Balcerzak, Dmitry Zhiltsov',
-    author_email='marcin@python-works.com',
-    description=vcs.__doc__,
+    author_email='dzhiltsov@me.com',
+    description=managevcs.__doc__,
     long_description=long_description,
     zip_safe=False,
     packages=find_packages(),
     scripts=[],
     install_requires=install_requires,
     tests_require=tests_require,
-    test_suite='vcs.tests.collector',
+    test_suite='managevcs.tests.collector',
     include_package_data=True,
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -42,10 +42,5 @@ setup(
         'Programming Language :: Python',
         'Operating System :: OS Independent',
     ],
-    entry_points={
-        'console_scripts': [
-            'vcs = vcs:main',
-        ],
-    },
     cmdclass={'flakes': RunFlakesCommand},
 )
