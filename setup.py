@@ -1,7 +1,6 @@
 import os
 import sys
 from setuptools import setup, find_packages
-from extras import RunFlakesCommand
 
 managevcs = __import__('managevcs')
 readme_file = os.path.abspath(os.path.join(os.path.dirname(__file__),
@@ -42,5 +41,4 @@ setup(
         'Programming Language :: Python',
         'Operating System :: OS Independent',
     ],
-    cmdclass={'flakes': RunFlakesCommand},
 )
