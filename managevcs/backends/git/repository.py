@@ -42,8 +42,7 @@ class GitRepository(BaseRepository):
     DEFAULT_BRANCH_NAME = 'master'
     scm = 'git'
 
-    def __init__(self, repo_path, create=False, src_url=None,
-                 update_after_clone=False, bare=False):
+    def __init__(self, repo_path, create=False, src_url=None, update_after_clone=False, bare=False):
 
         self.path = abspath(repo_path)
         repo = self._get_repo(create, src_url, update_after_clone, bare)

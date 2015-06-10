@@ -8,7 +8,7 @@ from managevcs.utils.paths import abspath
 from managevcs.utils.imports import import_class
 
 
-def get_repo(path=None, alias=None, create=False):
+def get_repo(path=None, alias=None, create=False, bare=True):
     """
     Returns ``Repository`` object of type linked with given ``alias`` at
     the specified ``path``. If ``alias`` is not given it will try to guess it
@@ -17,7 +17,7 @@ def get_repo(path=None, alias=None, create=False):
     if create:
         if not (path or alias):
             raise TypeError("If create is specified, we need path and scm type")
-        return get_backend(alias)(path, create=True)
+        return get_backend(alias)(path, create=True, bare=bare)
     if path is None:
         path = abspath(os.path.curdir)
     try:

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-VERSION = (0, 5, 1, 'dev')
+VERSION = (0, 5, 2, 'dev')
 
 __version__ = '.'.join((str(each) for each in VERSION[:4]))
 

@@ -31,7 +31,7 @@ TEST_GIT_REPO_CLONE = os.environ.get('VCS_TEST_GIT_REPO_CLONE',
 TEST_GIT_REPO_PULL = os.environ.get('VCS_TEST_GIT_REPO_PULL',
                             jn(TEST_TMP_PATH, 'vcsgitpull%s' % uniq_suffix))
 
-HG_REMOTE_REPO = 'http://bitbucket.org/marcinkuzminski/vcslib'
+HG_REMOTE_REPO = 'http://bitbucket.org/marcinkuzminski/vcs'
 TEST_HG_REPO = os.environ.get('VCS_TEST_HG_REPO',
                               jn(TEST_TMP_PATH, 'vcs-hg'))
 TEST_HG_REPO_CLONE = os.environ.get('VCS_TEST_HG_REPO_CLONE',
