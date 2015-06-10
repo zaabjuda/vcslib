@@ -15,8 +15,8 @@ __all__ = (
     'SCM_TESTS',
 )
 
-# SCM_TESTS = ['hg', 'git']
-SCM_TESTS = ['git']
+SCM_TESTS = ['hg', 'git']
+# SCM_TESTS = ['git']
 uniq_suffix = str(int(time.mktime(datetime.datetime.now().timetuple())))
 
 THIS = os.path.abspath(os.path.dirname(__file__))
